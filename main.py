@@ -1,0 +1,201 @@
+import string
+
+import os
+
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
+
+print(Fore.GREEN)
+print("Özel Şifreleme Sistemi")
+print("by SametOzturk")
+print(Fore.WHITE)
+input("Devam etmek için ENTER")
+clear = lambda: os.system('cls')
+clear()
+print(Fore.YELLOW)
+print("1-) Şifrelemek için")
+print("2-) Şifreyi kırmak için")
+print(Fore.WHITE)
+secim = input("İşlemi seçiniz: ")
+clear = lambda: os.system('cls')
+clear()
+if (secim == "1"):
+    kelime = input("Şifrelenmesini istediğiniz veriyi giriniz: ")
+
+    veri_uzunlugu = len(kelime)
+    sifrelenmis_veri = kelime[veri_uzunlugu::-1]
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("A","2*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("a","2>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("B","22*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("b","22|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("C","222*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("c","222|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("Ç","2222*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("ç","2222|")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("D","3*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("d","3|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("E","33*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("e","33>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("F","333*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("f","333|")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("G","4*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("g","4|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("Ğ","44*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("ğ","44|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("H","444*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("h","444|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("I","4444*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("ı","4444>")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("İ","5*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("i","5>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("J","55*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("j","55|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("K","555*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("k","555|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("L","5555*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("l","5555|")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("M","6*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("m","6|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("N","66*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("n","66|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("O","666*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("o","666>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("Ö","6666*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("ö","6666>")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("P","7*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("p","7|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("R","77*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("r","77|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("S","777*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("s","777|")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("Ş","8*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("ş","8|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("T","88*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("t","88|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("U","888*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("u","888>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("Ü","8888*>")
+    sifrelenmis_veri = sifrelenmis_veri.replace("ü","8888>")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace("V","9*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("v","9|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("Y","99*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("y","99|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("Z","999*|")
+    sifrelenmis_veri = sifrelenmis_veri.replace("z","999|")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace(" ","-")
+
+    sifrelenmis_veri = sifrelenmis_veri.replace(".",">1<")
+    sifrelenmis_veri = sifrelenmis_veri.replace(",",">1*1<")
+    sifrelenmis_veri = sifrelenmis_veri.replace("?",">1*1*1<")
+    sifrelenmis_veri = sifrelenmis_veri.replace(":",">11*11<")
+    sifrelenmis_veri = sifrelenmis_veri.replace(";",">11*1*11<")
+    sifrelenmis_veri = sifrelenmis_veri.replace("!",">111*111<")
+    sifrelenmis_veri = sifrelenmis_veri.replace("#",">111*1*111<")
+    sifrelenmis_veri = sifrelenmis_veri.replace("@",">1111*1111<")
+    sifrelenmis_veri = sifrelenmis_veri.replace("/",">1111*1*1111<")
+
+    print(sifrelenmis_veri)
+    
+    input("\nİşlem bitti çıkmak için ENTER")
+
+if (secim == "2"):
+    sifre = input("Kırılmasını istediğiniz şifreyi giriniz: ")
+
+    kirilmis_veri = sifre.replace(">1111*1*1111<","/")
+    kirilmis_veri = kirilmis_veri.replace(">1111*1111<","@")
+    kirilmis_veri = kirilmis_veri.replace(">111*1*111<","#")
+    kirilmis_veri = kirilmis_veri.replace(">111*111<","!") 
+    kirilmis_veri = kirilmis_veri.replace(">11*1*11<",";")
+    kirilmis_veri = kirilmis_veri.replace(">11*11<",":")
+    kirilmis_veri = kirilmis_veri.replace(">1*1*1<","?")
+    kirilmis_veri = kirilmis_veri.replace(">1*1<",",")
+    kirilmis_veri = kirilmis_veri.replace(">1<",".")
+
+    kirilmis_veri = kirilmis_veri.replace("2222*|","Ç")
+    kirilmis_veri = kirilmis_veri.replace("2222|","ç")
+    kirilmis_veri = kirilmis_veri.replace("222*|","C")
+    kirilmis_veri = kirilmis_veri.replace("222|","c")
+    kirilmis_veri = kirilmis_veri.replace("22*|","B")
+    kirilmis_veri = kirilmis_veri.replace("22|","b")
+    kirilmis_veri = kirilmis_veri.replace("2*>","A")
+    kirilmis_veri = kirilmis_veri.replace("2>","a")
+
+    kirilmis_veri = kirilmis_veri.replace("333*|","F")
+    kirilmis_veri = kirilmis_veri.replace("333|","f")
+    kirilmis_veri = kirilmis_veri.replace("33*>","E")
+    kirilmis_veri = kirilmis_veri.replace("33>","e")
+    kirilmis_veri = kirilmis_veri.replace("3*|","D")
+    kirilmis_veri = kirilmis_veri.replace("3|","d")
+
+    kirilmis_veri = kirilmis_veri.replace("4444*>","I")
+    kirilmis_veri = kirilmis_veri.replace("4444>","ı")
+    kirilmis_veri = kirilmis_veri.replace("444*|","H")
+    kirilmis_veri = kirilmis_veri.replace("444|","h")
+    kirilmis_veri = kirilmis_veri.replace("44*|","Ğ")
+    kirilmis_veri = kirilmis_veri.replace("44|","ğ")
+    kirilmis_veri = kirilmis_veri.replace("4*|","G")
+    kirilmis_veri = kirilmis_veri.replace("4|","g")
+
+    kirilmis_veri = kirilmis_veri.replace("5555*|","L")
+    kirilmis_veri = kirilmis_veri.replace("5555|","l")
+    kirilmis_veri = kirilmis_veri.replace("555*|","K")
+    kirilmis_veri = kirilmis_veri.replace("555|","k")
+    kirilmis_veri = kirilmis_veri.replace("55*|","J")
+    kirilmis_veri = kirilmis_veri.replace("55|","j")
+    kirilmis_veri = kirilmis_veri.replace("5*>","İ")
+    kirilmis_veri = kirilmis_veri.replace("5>","i")
+
+    kirilmis_veri = kirilmis_veri.replace("6666*>","Ö")
+    kirilmis_veri = kirilmis_veri.replace("6666>","ö")
+    kirilmis_veri = kirilmis_veri.replace("666*>","O")
+    kirilmis_veri = kirilmis_veri.replace("666>","o")
+    kirilmis_veri = kirilmis_veri.replace("66*|","N")
+    kirilmis_veri = kirilmis_veri.replace("66|","n")
+    kirilmis_veri = kirilmis_veri.replace("6*|","M")
+    kirilmis_veri = kirilmis_veri.replace("6|","m")
+
+    kirilmis_veri = kirilmis_veri.replace("777*|","S")
+    kirilmis_veri = kirilmis_veri.replace("777|","s")
+    kirilmis_veri = kirilmis_veri.replace("77*|","R")
+    kirilmis_veri = kirilmis_veri.replace("77|","r")
+    kirilmis_veri = kirilmis_veri.replace("7*|","P")
+    kirilmis_veri = kirilmis_veri.replace("7|","p")
+
+    kirilmis_veri = kirilmis_veri.replace("8888*>","Ü")
+    kirilmis_veri = kirilmis_veri.replace("8888>","ü")
+    kirilmis_veri = kirilmis_veri.replace("888*>","U")
+    kirilmis_veri = kirilmis_veri.replace("888>","u")
+    kirilmis_veri = kirilmis_veri.replace("88*|","T")
+    kirilmis_veri = kirilmis_veri.replace("88|","t")
+    kirilmis_veri = kirilmis_veri.replace("8*|","Ş")
+    kirilmis_veri = kirilmis_veri.replace("8|","ş")
+
+    kirilmis_veri = kirilmis_veri.replace("999*|","Z")
+    kirilmis_veri = kirilmis_veri.replace("999|","z")
+    kirilmis_veri = kirilmis_veri.replace("99*|","Y")
+    kirilmis_veri = kirilmis_veri.replace("99|","y")
+    kirilmis_veri = kirilmis_veri.replace("9*|","V")
+    kirilmis_veri = kirilmis_veri.replace("9|","v")
+
+    kirilmis_veri = kirilmis_veri.replace("-"," ")
+
+    veri_uzunlugu = len(kirilmis_veri)
+    kirilmis_veri = kirilmis_veri[veri_uzunlugu::-1]
+
+    print(kirilmis_veri)
+
+    input("\nİşlem bitti çıkmak için ENTER")
+else:
+    print(Fore.RED)
+    print("Yanlış seçim yapıldı, uygulama kapatılıyor...")
+    exit()
